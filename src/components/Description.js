@@ -8,12 +8,7 @@ function Description() {
         Om Meg
       </Typography>
       <Typography>
-        Hei! Dette bildet er av en sjarmerende blomst hentet fra Unsplash.
-        Unsplash tilbyr et bredt utvalg av gratis bilder av høy kvalitet som kan
-        brukes til forskjellige formål. Så hvis du leter etter inspirerende
-        bilder for ditt neste prosjekt, anbefales det å sjekke ut Unsplash. For
-        øvrig, denne teksten ble generert med hjelp av ChatGPT fra OpenAI.
-        Fascinerende, ikke sant?
+      Austevollsbunaden er en vakker og tradisjonsrik drakt som stammer fra øykommunen Austevoll på Vestlandet i Norge. En viktig del av denne bunadens uttrykk er bringeduk, også kjent som bringeskjorte. Bringeduken til Austevollsbunaden er en nøye utformet og håndbrodert skjorte som bæres under livet og vesten. Denne skjorten er et mesterverk av bunadshåndverk og prydes ofte med vakre broderier som symboliserer regionens rike kulturarv. Bringeduken er med på å fullføre bunadens autentiske uttrykk, og den er en stolt bærer av Austevolls kulturarv og tradisjoner.
       </Typography>
     </Box>
   );
