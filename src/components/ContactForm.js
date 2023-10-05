@@ -8,6 +8,7 @@ import {
   Snackbar,
   CircularProgress,
   Stack,
+  Avatar
 } from "@mui/material";
 
 function ContactForm() {
@@ -34,7 +35,7 @@ function ContactForm() {
         },
         body: JSON.stringify({
           ...formData,
-          access_key: "HER-MÅ-DU-LEGGE-INN-DIN-ACCESS-KEY", // Get your access key from https://web3forms.com/
+          access_key: "1d714ba1-c2noe39-4458-9bfa-25a1527c9118", // Get your access key from https://web3forms.com/
         }),
       });
 
@@ -42,12 +43,22 @@ function ContactForm() {
 
       if (data.success) {
         setSnackbarMessage(
-          "Din melding har blitt sendt! Takk for at du kontaktet oss."
+          "Din melding har blitt sendt! Det er ikke sikkert at du får svar."
         );
         setSnackbarType("success");
         setFormData({ email: "", message: "" });
       } else {
-        setSnackbarMessage("Noe gikk galt. Prøv igjen senere.");
+        setSnackbarMessage(      
+        <Avatar
+          src="/hunden.gif"
+          alt="Hund"
+          sx={{
+            width: 150,
+            height: 150,
+            margin: "auto",
+            border: "4px solid #3f51b5",
+          }}
+        />);
         setSnackbarType("error");
       }
     } catch (error) {
@@ -61,7 +72,7 @@ function ContactForm() {
   return (
     <Box py={5} bgcolor="#ffffff" borderRadius={3} boxShadow={3} mt={4} px={3}>
       <Typography variant="h6" gutterBottom color="#3f51b5">
-        Kontakt Meg
+        Ikke kontakt meg
       </Typography>
 
       <Stack component="form" onSubmit={handleSubmit} spacing={2}>
@@ -100,10 +111,12 @@ function ContactForm() {
         </Stack>
       </Stack>
 
+      <Stack spacing={2}>
       <Snackbar
         open={Boolean(snackbarMessage)}
         autoHideDuration={6000}
         onClose={() => setSnackbarMessage("")}
+        sx={{height:100}}
       >
         <Alert
           onClose={() => setSnackbarMessage("")}
@@ -113,6 +126,7 @@ function ContactForm() {
           {snackbarMessage}
         </Alert>
       </Snackbar>
+      </Stack>
     </Box>
   );
 }
